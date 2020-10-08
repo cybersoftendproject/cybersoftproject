@@ -29,6 +29,7 @@ const mapDispatchToProps = (dispatch) => {
         url:"https://movie0706.cybersoft.edu.vn/api/QuanLyPhim/LayDanhSachPhim?maNhom=GP02",
         method: "GET",
     }).then((res)=>{
+        console.log(res.data)
         const action = {
             type: 'LIST_MOVIE',
             payload: res.data,

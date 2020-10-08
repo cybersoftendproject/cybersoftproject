@@ -35,7 +35,7 @@ import axios from 'axios';
     handleSubmit = (e) => {
         e.preventDefault();
         axios({
-            url:"http://movie0706.cybersoft.edu.vn/api/QuanLyNguoiDung/DangNhap",
+            url:"https://movie0706.cybersoft.edu.vn/api/QuanLyNguoiDung/DangNhap",
             method: "POST",
             data:this.state,
         }).then((res)=>{
