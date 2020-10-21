@@ -12,6 +12,7 @@ import MenuItem from '@material-ui/core/MenuItem'
 import FormHelperText from '@material-ui/core/FormHelperText'
 import Typography from '@material-ui/core/Typography'
 import axios from 'axios';
+import { Redirect } from 'react-router';
 
  class SignIn extends Component {
     constructor(props){
@@ -44,7 +45,9 @@ import axios from 'axios';
             this.setState({
                 isLogin: true
             })
-            localStorage.setItem("accessToken", res.data.accessToken);
+            if(this.state.isLogin===true){
+                window.location.href = "/index"
+            }
         }else{
             console.log("Bạn không có quyền đăng nhập vào trang này")
         }     
